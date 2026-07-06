@@ -15,7 +15,19 @@
 		     Forms, Primal Strike, Elemental Wild Shape, Thousand Forms) -->
 		<file name="archetype-circle-of-the-moon.xml" url="https://raw.githubusercontent.com/spelldr/aurora/refs/heads/main/custom/user/archetype-circle-of-the-moon.xml" />
 
-		<!-- Expanded background pack: PHB-style backgrounds + Knight/Pirate -->
-		<file name="backgrounds-expanded.xml" url="https://raw.githubusercontent.com/spelldr/aurora/refs/heads/main/custom/user/backgrounds-expanded.xml" />
+		<!-- PHB backgrounds (official Aurora elements). Knight and Pirate are
+		     included as variants inside Noble and Sailor. -->
+		<file name="background-charlatan.xml" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/backgrounds/background-charlatan.xml" />
+		<file name="background-criminal.xml" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/backgrounds/background-criminal.xml" />
+		<file name="background-entertainer.xml" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/backgrounds/background-entertainer.xml" />
+		<file name="background-folk-hero.xml" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/backgrounds/background-folk-hero.xml" />
+		<file name="background-guild-artisan.xml" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/backgrounds/background-guild-artisan.xml" />
+		<file name="background-hermit.xml" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/backgrounds/background-hermit.xml" />
+		<file name="background-noble.xml" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/backgrounds/background-noble.xml" />
+		<file name="background-outlander.xml" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/backgrounds/background-outlander.xml" />
+		<file name="background-sage.xml" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/backgrounds/background-sage.xml" />
+		<file name="background-sailor.xml" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/backgrounds/background-sailor.xml" />
+		<file name="background-soldier.xml" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/backgrounds/background-soldier.xml" />
+		<file name="background-urchin.xml" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/backgrounds/background-urchin.xml" />
 	</files>
 </index>
