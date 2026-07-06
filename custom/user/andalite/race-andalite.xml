@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+	<info>
+		<name>Andalite</name>
+		<update version="0.1.0">
+			<file name="race-andalite.xml" url="https://raw.githubusercontent.com/spelldr/aurora/refs/heads/main/custom/user/race-andalite.xml" />
+		</update>
+	</info>
+
+	<!--
+		Andalite (Tiefling Subrace)
+		=====================================================================
+		Andalites are a centauroid species with a humanoid upper body, four
+		hooved legs, and a scorpion-like tail ending in a curved blade. They
+		have no mouths and communicate entirely through thought-speak — a
+		form of telepathy. Their defining ability is morphing: the capacity
+		to acquire and transform into the bodies of other creatures.
+
+		This is modelled as a tiefling subrace. Selecting it suppresses the
+		default tiefling ability score increases (Int +1, Cha +2) and the
+		Infernal Legacy trait, replacing them with Wisdom +2 and the
+		Andalite-specific traits below. The base tiefling's Darkvision and
+		Hellish Resistance are retained.
+	-->
+
+	<element name="Andalite" type="Sub Race" source="Custom Homebrew" id="ID_CUSTOM_SUB_RACE_ANDALITE">
+		<supports>Tiefling</supports>
+		<description>
+			<p>Andalites are a centauroid species possessing a humanoid upper torso atop four powerful, hooved legs, with a long, scorpion-like tail ending in a razor-sharp curved blade. Their two main eyes sit beneath a crown of graceful horns — a silhouette that earns them easy passage as unusual tieflings among those who don't look too closely.</p>
+			<p class="indent">Andalites have no mouths. They eat by absorbing nutrients through their hooves and communicate entirely through thought-speak: a form of directed telepathy that can be heard only by those the speaker chooses. Their most extraordinary ability is morphing — a biological and psychic process that lets them acquire the genetic template of any creature they touch and reshape their body into that form.</p>
+			<p class="indent">Andalites who take up the druidic path find that Wild Shape resonates deeply with their innate morphing instinct. Many are drawn to the Circle of the Moon, where the practice of assuming beast forms is elevated to an art form.</p>
+			<h4>ANDALITE NAMES</h4>
+			<p>Andalite names follow a three-part structure: a given name, a sib-name (denoting their birth-sibling group), and a dam-name (denoting their mother's line), joined by hyphens. In common usage among other species, most Andalites go by their given name alone.</p>
+			<ul class="unstyled">
+				<li><strong>Male Names:</strong> Elfangor, Arbron, Alloran, Aldrea, Gafinilan, Mertil, Seerow, Escafil, Harlin, Gonrod</li>
+				<li><strong>Female Names:</strong> Aldrea, Noorlin, Estrid, Samilin, Daralur, Helara, Quafijinivon</li>
+			</ul>
+			<h4>ANDALITE TRAITS</h4>
+			<p>Your andalite heritage grants you the following traits in place of the standard tiefling ability score increases and Infernal Legacy.</p>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Wisdom score increases by 2.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your base walking speed increases to 35 feet.</p>
+			<p class="indent"><strong><em>Thought-Speak.</em></strong> You have no mouth and cannot speak aloud. You communicate through a directed form of telepathy. You can speak telepathically with any creature you can see within 60 feet of you that has at least one language. A creature you communicate with this way can reply telepathically. When casting a spell that requires a verbal component, you may fulfill that requirement through thought-speak instead of a spoken word.</p>
+			<p class="indent"><strong><em>Tail Blade.</em></strong> Your tail ends in a curved blade of hardened bone and keratin. You are proficient with your tail blade, which is a natural melee weapon that deals 1d6 slashing damage + your Strength or Dexterity modifier (your choice) on a hit. Your tail blade has the finesse property. When a creature provokes an opportunity attack from you, you can make that attack with your tail blade even if you took the Dodge action on your turn.</p>
+			<p class="indent"><strong><em>Andalite Morphing.</em></strong> You know the <em>druidcraft</em> cantrip. When you reach 3rd level, you can cast <em>disguise self</em> once with this trait, regaining the ability to do so when you finish a long rest. When you reach 5th level, you can cast <em>alter self</em> once with this trait, regaining the ability to do so when you finish a long rest. Wisdom is your spellcasting ability for these spells.</p>
+			<p class="indent"><strong><em>Languages.</em></strong> You can speak Andalite (via thought-speak). Andalite has no written form.</p>
+		</description>
+		<sheet display="false" />
+		<setters>
+			<set name="names" type="male">Elfangor, Arbron, Alloran, Gafinilan, Mertil, Seerow, Escafil, Harlin, Gonrod</set>
+			<set name="names" type="female">Aldrea, Noorlin, Estrid, Samilin, Daralur, Helara</set>
+			<set name="names-format">{{name}}</set>
+			<set name="height" modifier="2d6">5'4"</set>
+			<set name="weight" modifier="2d8">140 lb.</set>
+		</setters>
+		<rules>
+			<!-- Suppress the base tiefling's Int +1, Cha +2 and Infernal Legacy -->
+			<grant type="Grants" id="ID_INTERNAL_GRANTS_TIEFLING_SUBRACE" />
+
+			<!-- Ability score increase: Wisdom +2 -->
+			<stat name="wisdom" value="2" />
+
+			<!-- Speed: increase to 35 ft (four hooved legs) -->
+			<stat name="innate speed" value="35" bonus="base" />
+
+			<!-- Racial traits -->
+			<grant type="Racial Trait" id="ID_CUSTOM_RACIAL_TRAIT_ANDALITE_THOUGHT_SPEAK" />
+			<grant type="Racial Trait" id="ID_CUSTOM_RACIAL_TRAIT_ANDALITE_TAIL_BLADE" />
+			<grant type="Racial Trait" id="ID_CUSTOM_RACIAL_TRAIT_ANDALITE_MORPHING" />
+
+			<!-- Language -->
+			<grant type="Language" id="ID_CUSTOM_LANGUAGE_ANDALITE" />
+		</rules>
+	</element>
+
+	<!-- ═══════════════════════════════════════════
+	     RACIAL TRAITS
+	     ═══════════════════════════════════════════ -->
+
+	<element name="Thought-Speak" type="Racial Trait" source="Custom Homebrew" id="ID_CUSTOM_RACIAL_TRAIT_ANDALITE_THOUGHT_SPEAK">
+		<description>
+			<p>You have no mouth and cannot speak aloud. You communicate through a directed form of telepathy. You can speak telepathically with any creature you can see within 60 feet of you that has at least one language. A creature you communicate with this way can reply telepathically. When casting a spell that requires a verbal component, you may fulfill that requirement through thought-speak instead of a spoken word.</p>
+		</description>
+		<sheet>
+			<description>You communicate through directed telepathy (thought-speak). You can speak with any creature you can see within 60 ft that has at least one language; it may reply telepathically. You can use thought-speak to satisfy the verbal component of spells.</description>
+		</sheet>
+	</element>
+
+	<element name="Tail Blade" type="Racial Trait" source="Custom Homebrew" id="ID_CUSTOM_RACIAL_TRAIT_ANDALITE_TAIL_BLADE">
+		<description>
+			<p>Your tail ends in a curved blade of hardened bone and keratin. You are proficient with your tail blade, which is a natural melee weapon that deals 1d6 slashing damage + your Strength or Dexterity modifier (your choice) on a hit. Your tail blade has the finesse property. When a creature provokes an opportunity attack from you, you can make that attack with your tail blade even if you took the Dodge action on your turn.</p>
+		</description>
+		<sheet>
+			<description>Natural weapon: tail blade (1d6 slashing, finesse). You may make tail blade opportunity attacks even after taking the Dodge action.</description>
+		</sheet>
+	</element>
+
+	<element name="Andalite Morphing" type="Racial Trait" source="Custom Homebrew" id="ID_CUSTOM_RACIAL_TRAIT_ANDALITE_MORPHING">
+		<description>
+			<p>You know the <em>druidcraft</em> cantrip. When you reach 3rd level, you can cast <em>disguise self</em> once with this trait, regaining the ability to do so when you finish a long rest. When you reach 5th level, you can cast <em>alter self</em> once with this trait, regaining the ability to do so when you finish a long rest. Wisdom is your spellcasting ability for these spells.</p>
+		</description>
+		<sheet>
+			<description>You know the druidcraft cantrip. (Wisdom)</description>
+			<description level="3">You know the druidcraft cantrip. You can cast disguise self once per long rest. (Wisdom)</description>
+			<description level="5">You know the druidcraft cantrip. You can cast disguise self and alter self once per long rest each. (Wisdom)</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_DRUIDCRAFT" />
+			<grant type="Spell" id="ID_PHB_SPELL_DISGUISE_SELF" level="3" />
+			<grant type="Spell" id="ID_PHB_SPELL_ALTER_SELF" level="5" />
+		</rules>
+	</element>
+
+	<!-- ═══════════════════════════════════════════
+	     LANGUAGE
+	     ═══════════════════════════════════════════ -->
+
+	<element name="Andalite" type="Language" source="Custom Homebrew" id="ID_CUSTOM_LANGUAGE_ANDALITE">
+		<description>
+			<p>A purely telepathic language with no written form. Andalite is transmitted through thought-speak and can be received only by creatures with a compatible form of telepathic sense, or by those to whom the speaker consciously directs it.</p>
+		</description>
+		<setters>
+			<set name="speakers">Andalites</set>
+			<set name="script">None (telepathic only)</set>
+		</setters>
+	</element>
+
+</elements>

@@ -14,5 +14,8 @@
 		<!-- Circle of the Moon druid archetype (Combat Wild Shape, Circle
 		     Forms, Primal Strike, Elemental Wild Shape, Thousand Forms) -->
 		<file name="archetype-circle-of-the-moon.xml" url="https://raw.githubusercontent.com/spelldr/aurora/refs/heads/main/custom/user/archetype-circle-of-the-moon.xml" />
+
+		<!-- Expanded background pack: PHB-style backgrounds + Knight/Pirate -->
+		<file name="backgrounds-expanded.xml" url="https://raw.githubusercontent.com/spelldr/aurora/refs/heads/main/custom/user/backgrounds-expanded.xml" />
 	</files>
 </index>

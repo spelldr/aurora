@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+	<info>
+		<name>Expanded Backgrounds</name>
+		<update version="0.1.0">
+			<file name="backgrounds-expanded.xml" url="https://raw.githubusercontent.com/spelldr/aurora/refs/heads/main/custom/user/backgrounds-expanded.xml" />
+		</update>
+	</info>
+
+	<element name="Charlatan" type="Background" source="Custom Homebrew" id="ID_CUSTOM_BACKGROUND_CHARLATAN">
+		<setters>
+			<set name="short">Deception, Sleight of Hand, Disguise Kit, Forgery Kit</set>
+		</setters>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_DECEPTION" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_SLEIGHT_OF_HAND" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_DISGUISE_KIT" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_FORGERY_KIT" />
+			<grant type="Background Feature" id="ID_CUSTOM_BACKGROUND_FEATURE_FALSE_IDENTITY" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE" />
+			<select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+		</rules>
+	</element>
+
+	<element name="Criminal" type="Background" source="Custom Homebrew" id="ID_CUSTOM_BACKGROUND_CRIMINAL">
+		<setters>
+			<set name="short">Deception, Stealth, Gaming Set, Thieves' Tools</set>
+		</setters>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_DECEPTION" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_STEALTH" />
+			<select type="Proficiency" name="Gaming Set (Criminal)" supports="Gaming Set" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_THIEVES_TOOLS" />
+			<grant type="Background Feature" id="ID_CUSTOM_BACKGROUND_FEATURE_CRIMINAL_CONTACT" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE" />
+			<select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+		</rules>
+	</element>
+
+	<element name="Entertainer" type="Background" source="Custom Homebrew" id="ID_CUSTOM_BACKGROUND_ENTERTAINER">
+		<setters>
+			<set name="short">Acrobatics, Performance, Disguise Kit, Musical Instrument</set>
+		</setters>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ACROBATICS" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERFORMANCE" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_DISGUISE_KIT" />
+			<select type="Proficiency" name="Musical Instrument (Entertainer)" supports="Musical Instrument" />
+			<grant type="Background Feature" id="ID_CUSTOM_BACKGROUND_FEATURE_BY_POPULAR_DEMAND" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE" />
+			<select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+		</rules>
+	</element>
+
+	<element name="Folk Hero" type="Background" source="Custom Homebrew" id="ID_CUSTOM_BACKGROUND_FOLK_HERO">
+		<setters>
+			<set name="short">Animal Handling, Survival, Artisan's Tools, Vehicles (Land)</set>
+		</setters>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ANIMAL_HANDLING" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_SURVIVAL" />
+			<select type="Proficiency" name="Artisan's Tools (Folk Hero)" supports="Artisan's Tools" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_VEHICLES_LAND" />
+			<grant type="Background Feature" id="ID_CUSTOM_BACKGROUND_FEATURE_RUSTIC_HOSPITALITY" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE" />
+			<select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+		</rules>
+	</element>
+
+	<element name="Guild Artisan" type="Background" source="Custom Homebrew" id="ID_CUSTOM_BACKGROUND_GUILD_ARTISAN">
+		<setters>
+			<set name="short">Insight, Persuasion, Artisan's Tools, Language</set>
+		</setters>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INSIGHT" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERSUASION" />
+			<select type="Proficiency" name="Artisan's Tools (Guild Artisan)" supports="Artisan's Tools" />
+			<select type="Language" name="Language (Guild Artisan)" supports="Standard||Exotic" />
+			<grant type="Background Feature" id="ID_CUSTOM_BACKGROUND_FEATURE_GUILD_MEMBERSHIP" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE" />
+			<select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+		</rules>
+	</element>
+
+	<element name="Hermit" type="Background" source="Custom Homebrew" id="ID_CUSTOM_BACKGROUND_HERMIT">
+		<setters>
+			<set name="short">Medicine, Religion, Herbalism Kit, Language</set>
+		</setters>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_MEDICINE" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_RELIGION" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_HERBALISM_KIT" />
+			<select type="Language" name="Language (Hermit)" supports="Standard||Exotic" />
+			<grant type="Background Feature" id="ID_CUSTOM_BACKGROUND_FEATURE_DISCOVERY" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE" />
+			<select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+		</rules>
+	</element>
+
+	<element name="Noble" type="Background" source="Custom Homebrew" id="ID_CUSTOM_BACKGROUND_NOBLE">
+		<setters>
+			<set name="short">History, Persuasion, Gaming Set, Language</set>
+		</setters>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_HISTORY" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERSUASION" />
+			<select type="Proficiency" name="Gaming Set (Noble)" supports="Gaming Set" />
+			<select type="Language" name="Language (Noble)" supports="Standard||Exotic" />
+			<grant type="Background Feature" id="ID_CUSTOM_BACKGROUND_FEATURE_POSITION_OF_PRIVILEGE" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE" />
+			<select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+		</rules>
+	</element>
+
+	<element name="Outlander" type="Background" source="Custom Homebrew" id="ID_CUSTOM_BACKGROUND_OUTLANDER">
+		<setters>
+			<set name="short">Athletics, Survival, Musical Instrument, Language</set>
+		</setters>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ATHLETICS" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_SURVIVAL" />
+			<select type="Proficiency" name="Musical Instrument (Outlander)" supports="Musical Instrument" />
+			<select type="Language" name="Language (Outlander)" supports="Standard||Exotic" />
+			<grant type="Background Feature" id="ID_CUSTOM_BACKGROUND_FEATURE_WANDERER" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE" />
+			<select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+		</rules>
+	</element>
+
+	<element name="Sage" type="Background" source="Custom Homebrew" id="ID_CUSTOM_BACKGROUND_SAGE">
+		<setters>
+			<set name="short">Arcana, History, 2 Languages</set>
+		</setters>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ARCANA" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_HISTORY" />
+			<select type="Language" name="Language (Sage)" number="2" supports="Standard||Exotic" />
+			<grant type="Background Feature" id="ID_CUSTOM_BACKGROUND_FEATURE_RESEARCHER" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE" />
+			<select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+		</rules>
+	</element>
+
+	<element name="Sailor" type="Background" source="Custom Homebrew" id="ID_CUSTOM_BACKGROUND_SAILOR">
+		<setters>
+			<set name="short">Athletics, Perception, Navigator's Tools, Vehicles (Water)</set>
+		</setters>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ATHLETICS" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERCEPTION" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_NAVIGATORS_TOOLS" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_VEHICLES_WATER" />
+			<grant type="Background Feature" id="ID_CUSTOM_BACKGROUND_FEATURE_SHIPS_PASSAGE" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE" />
+			<select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+		</rules>
+	</element>
+
+	<element name="Soldier" type="Background" source="Custom Homebrew" id="ID_CUSTOM_BACKGROUND_SOLDIER">
+		<setters>
+			<set name="short">Athletics, Intimidation, Gaming Set, Vehicles (Land)</set>
+		</setters>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ATHLETICS" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INTIMIDATION" />
+			<select type="Proficiency" name="Gaming Set (Soldier)" supports="Gaming Set" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_VEHICLES_LAND" />
+			<grant type="Background Feature" id="ID_CUSTOM_BACKGROUND_FEATURE_MILITARY_RANK" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE" />
+			<select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+		</rules>
+	</element>
+
+	<element name="Urchin" type="Background" source="Custom Homebrew" id="ID_CUSTOM_BACKGROUND_URCHIN">
+		<setters>
+			<set name="short">Sleight of Hand, Stealth, Disguise Kit, Thieves' Tools</set>
+		</setters>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_SLEIGHT_OF_HAND" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_STEALTH" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_DISGUISE_KIT" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_THIEVES_TOOLS" />
+			<grant type="Background Feature" id="ID_CUSTOM_BACKGROUND_FEATURE_CITY_SECRETS" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE" />
+			<select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+		</rules>
+	</element>
+
+	<element name="Knight" type="Background" source="Custom Homebrew" id="ID_CUSTOM_BACKGROUND_KNIGHT">
+		<setters>
+			<set name="short">History, Persuasion, Gaming Set, Language</set>
+		</setters>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_HISTORY" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERSUASION" />
+			<select type="Proficiency" name="Gaming Set (Knight)" supports="Gaming Set" />
+			<select type="Language" name="Language (Knight)" supports="Standard||Exotic" />
+			<grant type="Background Feature" id="ID_CUSTOM_BACKGROUND_FEATURE_RETAINERS" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE" />
+			<select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+		</rules>
+	</element>
+
+	<element name="Pirate" type="Background" source="Custom Homebrew" id="ID_CUSTOM_BACKGROUND_PIRATE">
+		<setters>
+			<set name="short">Athletics, Perception, Navigator's Tools, Vehicles (Water)</set>
+		</setters>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ATHLETICS" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERCEPTION" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_NAVIGATORS_TOOLS" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_VEHICLES_WATER" />
+			<grant type="Background Feature" id="ID_CUSTOM_BACKGROUND_FEATURE_BAD_REPUTATION" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE" />
+			<select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+		</rules>
+	</element>
+
+	<element name="Feature: False Identity" type="Background Feature" source="Custom Homebrew" id="ID_CUSTOM_BACKGROUND_FEATURE_FALSE_IDENTITY">
+		<supports>Background Feature</supports>
+		<sheet alt="False Identity" />
+	</element>
+
+	<element name="Feature: Criminal Contact" type="Background Feature" source="Custom Homebrew" id="ID_CUSTOM_BACKGROUND_FEATURE_CRIMINAL_CONTACT">
+		<supports>Background Feature</supports>
+		<sheet alt="Criminal Contact" />
+	</element>
+
+	<element name="Feature: By Popular Demand" type="Background Feature" source="Custom Homebrew" id="ID_CUSTOM_BACKGROUND_FEATURE_BY_POPULAR_DEMAND">
+		<supports>Background Feature</supports>
+		<sheet alt="By Popular Demand" />
+	</element>
+
+	<element name="Feature: Rustic Hospitality" type="Background Feature" source="Custom Homebrew" id="ID_CUSTOM_BACKGROUND_FEATURE_RUSTIC_HOSPITALITY">
+		<supports>Background Feature</supports>
+		<sheet alt="Rustic Hospitality" />
+	</element>
+
+	<element name="Feature: Guild Membership" type="Background Feature" source="Custom Homebrew" id="ID_CUSTOM_BACKGROUND_FEATURE_GUILD_MEMBERSHIP">
+		<supports>Background Feature</supports>
+		<sheet alt="Guild Membership" />
+	</element>
+
+	<element name="Feature: Discovery" type="Background Feature" source="Custom Homebrew" id="ID_CUSTOM_BACKGROUND_FEATURE_DISCOVERY">
+		<supports>Background Feature</supports>
+		<sheet alt="Discovery" />
+	</element>
+
+	<element name="Feature: Position of Privilege" type="Background Feature" source="Custom Homebrew" id="ID_CUSTOM_BACKGROUND_FEATURE_POSITION_OF_PRIVILEGE">
+		<supports>Background Feature</supports>
+		<sheet alt="Position of Privilege" />
+	</element>
+
+	<element name="Feature: Wanderer" type="Background Feature" source="Custom Homebrew" id="ID_CUSTOM_BACKGROUND_FEATURE_WANDERER">
+		<supports>Background Feature</supports>
+		<sheet alt="Wanderer" />
+	</element>
+
+	<element name="Feature: Researcher" type="Background Feature" source="Custom Homebrew" id="ID_CUSTOM_BACKGROUND_FEATURE_RESEARCHER">
+		<supports>Background Feature</supports>
+		<sheet alt="Researcher" />
+	</element>
+
+	<element name="Feature: Ship's Passage" type="Background Feature" source="Custom Homebrew" id="ID_CUSTOM_BACKGROUND_FEATURE_SHIPS_PASSAGE">
+		<supports>Background Feature</supports>
+		<sheet alt="Ship's Passage" />
+	</element>
+
+	<element name="Feature: Military Rank" type="Background Feature" source="Custom Homebrew" id="ID_CUSTOM_BACKGROUND_FEATURE_MILITARY_RANK">
+		<supports>Background Feature</supports>
+		<sheet alt="Military Rank" />
+	</element>
+
+	<element name="Feature: City Secrets" type="Background Feature" source="Custom Homebrew" id="ID_CUSTOM_BACKGROUND_FEATURE_CITY_SECRETS">
+		<supports>Background Feature</supports>
+		<sheet alt="City Secrets" />
+	</element>
+
+	<element name="Feature: Retainers" type="Background Feature" source="Custom Homebrew" id="ID_CUSTOM_BACKGROUND_FEATURE_RETAINERS">
+		<supports>Background Feature</supports>
+		<sheet alt="Retainers" />
+	</element>
+
+	<element name="Feature: Bad Reputation" type="Background Feature" source="Custom Homebrew" id="ID_CUSTOM_BACKGROUND_FEATURE_BAD_REPUTATION">
+		<supports>Background Feature</supports>
+		<sheet alt="Bad Reputation" />
+	</element>
+
+</elements>
