@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+	<info>
+		<name>Circle of the Moon</name>
+		<description>The Circle of the Moon druid archetype, reproduced from freely available public data for use in Aurora without a PHB license.</description>
+		<author url="https://github.com">Custom Homebrew</author>
+	</info>
+
+	<!--
+		Circle of the Moon (Druid Archetype)
+		=====================================================================
+		Druids of the Circle of the Moon are fierce guardians of the wilds.
+		Their order gathers under the full moon to share news and trade
+		warnings. They haunt the deepest parts of the wilderness, where they
+		might go for weeks on end before crossing paths with another humanoid
+		creature, let alone another druid.
+
+		This file reproduces the Circle of the Moon features using custom
+		element IDs (ID_CUSTOM_*) to avoid conflicts with any official PHB
+		content that may already be loaded. If the official PHB content IS
+		present, Aurora will display both; simply choose this version when
+		selecting your Druid Circle.
+
+		Features granted:
+		  Level 2  — Combat Wild Shape
+		  Level 2  — Circle Forms
+		  Level 6  — Primal Strike
+		  Level 10 — Elemental Wild Shape
+		  Level 14 — Thousand Forms
+	-->
+
+	<element name="Circle of the Moon" type="Archetype" source="Custom Homebrew" id="ID_CUSTOM_ARCHETYPE_CIRCLEOFTHEMOON">
+		<supports>Druid Circle</supports>
+		<description>
+			<p>Druids of the Circle of the Moon are fierce guardians of the wilds. Their order gathers under the full moon to share news and trade warnings. They haunt the deepest parts of the wilderness, where they might go for weeks on end before crossing paths with another humanoid creature, let alone another druid.</p>
+			<p class="indent">Changeable as the moon, a druid of this circle might prowl as a great cat one night, soar over the treetops as an eagle the next day, and crash through the undergrowth in bear form to drive off a trespassing monster. The wild is in the druid's blood.</p>
+			<div element="ID_CUSTOM_ARCHETYPE_FEATURE_CIRCLE_MOON_COMBAT_WILD_SHAPE" />
+			<div element="ID_CUSTOM_ARCHETYPE_FEATURE_CIRCLE_MOON_CIRCLE_FORMS" />
+			<div element="ID_CUSTOM_ARCHETYPE_FEATURE_CIRCLE_MOON_PRIMAL_STRIKE" />
+			<div element="ID_CUSTOM_ARCHETYPE_FEATURE_CIRCLE_MOON_ELEMENTAL_WILD_SHAPE" />
+			<div element="ID_CUSTOM_ARCHETYPE_FEATURE_CIRCLE_MOON_THOUSAND_FORMS" />
+		</description>
+		<sheet display="false">
+			<description>Druids of the Circle of the Moon are fierce guardians of the wilds.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_CUSTOM_ARCHETYPE_FEATURE_CIRCLE_MOON_COMBAT_WILD_SHAPE" level="2" />
+			<grant type="Archetype Feature" id="ID_CUSTOM_ARCHETYPE_FEATURE_CIRCLE_MOON_CIRCLE_FORMS" level="2" />
+			<grant type="Archetype Feature" id="ID_CUSTOM_ARCHETYPE_FEATURE_CIRCLE_MOON_PRIMAL_STRIKE" level="6" />
+			<grant type="Archetype Feature" id="ID_CUSTOM_ARCHETYPE_FEATURE_CIRCLE_MOON_ELEMENTAL_WILD_SHAPE" level="10" />
+			<grant type="Archetype Feature" id="ID_CUSTOM_ARCHETYPE_FEATURE_CIRCLE_MOON_THOUSAND_FORMS" level="14" />
+		</rules>
+	</element>
+
+	<!-- ═══════════════════════════════════════════
+	     LEVEL 2 — COMBAT WILD SHAPE
+	     ═══════════════════════════════════════════ -->
+
+	<element name="Combat Wild Shape" type="Archetype Feature" source="Custom Homebrew" id="ID_CUSTOM_ARCHETYPE_FEATURE_CIRCLE_MOON_COMBAT_WILD_SHAPE">
+		<description>
+			<p>When you choose this circle at 2nd level, you gain the ability to use Wild Shape on your turn as a bonus action, rather than as an action.</p>
+			<p class="indent">Additionally, while you are transformed by Wild Shape, you can use a bonus action to expend one spell slot to regain 1d8 hit points per level of the spell slot expended.</p>
+		</description>
+		<sheet action="Bonus Action">
+			<description>You can use Wild Shape as a bonus action instead of an action. While transformed by Wild Shape, you can use a bonus action to expend one spell slot and regain 1d8 hp per level of the slot expended.</description>
+		</sheet>
+	</element>
+
+	<!-- ═══════════════════════════════════════════
+	     LEVEL 2 — CIRCLE FORMS
+	     ═══════════════════════════════════════════ -->
+
+	<element name="Circle Forms" type="Archetype Feature" source="Custom Homebrew" id="ID_CUSTOM_ARCHETYPE_FEATURE_CIRCLE_MOON_CIRCLE_FORMS">
+		<description>
+			<p>The rites of your circle grant you the ability to transform into more dangerous animal forms. Starting at 2nd level, you can use your Wild Shape to transform into a beast with a challenge rating as high as 1 (you ignore the Max. CR column of the Beast Shapes table, but must abide by the other limitations there).</p>
+			<p class="indent">Starting at 6th level, you can transform into a beast with a challenge rating as high as your druid level divided by 3, rounded down.</p>
+		</description>
+		<sheet>
+			<description>You can use Wild Shape to transform into a beast with a CR as high as {{circle forms:cr}}.</description>
+		</sheet>
+		<rules>
+			<!-- CR 1 at level 2 (base) -->
+			<stat name="circle forms:cr" value="1" bonus="base" />
+			<!-- CR increases at every 3 druid levels starting at 6 -->
+			<stat name="circle forms:cr" value="2" level="6"  bonus="base" />
+			<stat name="circle forms:cr" value="3" level="9"  bonus="base" />
+			<stat name="circle forms:cr" value="4" level="12" bonus="base" />
+			<stat name="circle forms:cr" value="5" level="15" bonus="base" />
+			<stat name="circle forms:cr" value="6" level="18" bonus="base" />
+		</rules>
+	</element>
+
+	<!-- ═══════════════════════════════════════════
+	     LEVEL 6 — PRIMAL STRIKE
+	     ═══════════════════════════════════════════ -->
+
+	<element name="Primal Strike" type="Archetype Feature" source="Custom Homebrew" id="ID_CUSTOM_ARCHETYPE_FEATURE_CIRCLE_MOON_PRIMAL_STRIKE">
+		<description>
+			<p>Starting at 6th level, your attacks in beast form count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage.</p>
+		</description>
+		<sheet>
+			<description>Your attacks in beast form count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage.</description>
+		</sheet>
+	</element>
+
+	<!-- ═══════════════════════════════════════════
+	     LEVEL 10 — ELEMENTAL WILD SHAPE
+	     ═══════════════════════════════════════════ -->
+
+	<element name="Elemental Wild Shape" type="Archetype Feature" source="Custom Homebrew" id="ID_CUSTOM_ARCHETYPE_FEATURE_CIRCLE_MOON_ELEMENTAL_WILD_SHAPE">
+		<description>
+			<p>At 10th level, you can expend two uses of Wild Shape at the same time to transform into an air elemental, an earth elemental, a fire elemental, or a water elemental.</p>
+		</description>
+		<sheet>
+			<description>You can expend two uses of Wild Shape simultaneously to transform into an air elemental, earth elemental, fire elemental, or water elemental.</description>
+		</sheet>
+	</element>
+
+	<!-- ═══════════════════════════════════════════
+	     LEVEL 14 — THOUSAND FORMS
+	     ═══════════════════════════════════════════ -->
+
+	<element name="Thousand Forms" type="Archetype Feature" source="Custom Homebrew" id="ID_CUSTOM_ARCHETYPE_FEATURE_CIRCLE_MOON_THOUSAND_FORMS">
+		<description>
+			<p>By 14th level, you have learned to use magic to alter your physical form in more subtle ways. You can cast the <em>alter self</em> spell at will.</p>
+		</description>
+		<sheet>
+			<description>You can cast the alter self spell at will.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_ALTER_SELF" spellcasting="Druid" />
+		</rules>
+	</element>
+
+</elements>
