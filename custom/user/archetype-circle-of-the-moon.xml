@@ -2,8 +2,9 @@
 <elements>
 	<info>
 		<name>Circle of the Moon</name>
-		<description>The Circle of the Moon druid archetype, reproduced from freely available public data for use in Aurora without a PHB license.</description>
-		<author url="https://github.com">Custom Homebrew</author>
+		<update version="0.1.0">
+			<file name="archetype-circle-of-the-moon.xml" url="https://raw.githubusercontent.com/spelldr/aurora/refs/heads/main/custom/user/archetype-circle-of-the-moon.xml" />
+		</update>
 	</info>
 
 	<!--

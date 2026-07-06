@@ -2,16 +2,17 @@
 <index>
 	<info>
 		<name>Andalite Custom Content</name>
-		<description>Custom content for an Andalite character build: the Andalite tiefling subrace and the Circle of the Moon druid archetype.</description>
-		<author url="https://github.com">Custom Homebrew</author>
+		<update version="0.1.0">
+			<file name="andalite.index" url="https://raw.githubusercontent.com/spelldr/aurora/refs/heads/main/custom/user/andalite.index" />
+		</update>
 	</info>
 	<files>
 		<!-- Andalite race (tiefling subrace with Wisdom ASI, Thought-Speak,
 		     Tail Blade, and Andalite Morphing) -->
-		<file name="race-andalite.xml" url="custom/user/race-andalite.xml" />
+		<file name="race-andalite.xml" url="https://raw.githubusercontent.com/spelldr/aurora/refs/heads/main/custom/user/race-andalite.xml" />
 
 		<!-- Circle of the Moon druid archetype (Combat Wild Shape, Circle
 		     Forms, Primal Strike, Elemental Wild Shape, Thousand Forms) -->
-		<file name="archetype-circle-of-the-moon.xml" url="custom/user/archetype-circle-of-the-moon.xml" />
+		<file name="archetype-circle-of-the-moon.xml" url="https://raw.githubusercontent.com/spelldr/aurora/refs/heads/main/custom/user/archetype-circle-of-the-moon.xml" />
 	</files>
 </index>

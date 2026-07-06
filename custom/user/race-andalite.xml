@@ -2,8 +2,9 @@
 <elements>
 	<info>
 		<name>Andalite</name>
-		<description>The Andalite race as a tiefling subrace variant for the Aurora character builder.</description>
-		<author url="https://github.com">Custom Homebrew</author>
+		<update version="0.1.0">
+			<file name="race-andalite.xml" url="https://raw.githubusercontent.com/spelldr/aurora/refs/heads/main/custom/user/race-andalite.xml" />
+		</update>
 	</info>
 
 	<!--
